@@ -8,12 +8,14 @@
           {{lotteryNum}}
         </div>
       </div>
-      <div class="lottery_button css17040173561f069" @click="toggleLottery(buttonName)">
-        {{buttonName}}
+      <!--<touch-ripple  class="button-group-box" color="#3c763d" :speed="0.7" >-->
+      <div  class="lottery_button css17040173561f069" @click="toggleLottery(buttonName)">
+          {{buttonName}}
       </div>
+      <!--</touch-ripple>-->
       <div class="lottery_set css1704cfa8411f069">
-        <span @click="showWinners">[中奖名单]</span>
-        <span @click="handleSetClick">[设置]</span>
+          <span @click="showWinners">[中奖名单]</span>
+          <span @click="handleSetClick">[设置]</span>
       </div>
       <winners ref="winners"></winners>
       <settings ref="settings"></settings>

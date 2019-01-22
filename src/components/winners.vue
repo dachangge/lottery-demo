@@ -1,7 +1,9 @@
 <template>
     <div class="winners" v-if="flag">
       <div class="winners_wapper"></div>
-      <div class="winners_bg">
+      <transition name="bounce">
+
+      <div class="winners_bg" v-if="flag2">
         <div class="close_icon" @click="toggle">
 
         </div>
@@ -30,9 +32,9 @@
           <span >{{lotteryResult[3] ? lotteryResult[3] : '(未产生)'}}</span>
           <span >{{lotteryResult[4] ? lotteryResult[4] : '(未产生)'}}</span>
         </div>
-
-
       </div>
+      </transition>
+
     </div>
 </template>
 
@@ -42,7 +44,8 @@ export default {
   name: 'winners',
   data () {
     return {
-      flag: false
+      flag: false,
+      flag2: false
     }
   },
   computed: {
@@ -53,6 +56,9 @@ export default {
   methods: {
     toggle () {
       this.flag = !this.flag
+      this.$nextTick(() => {
+        this.flag2 = !this.flag2
+      })
     }
   },
   mounted () {
@@ -73,6 +79,11 @@ export default {
       height: 100%;
       background: #484848;
       opacity: .63;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
     .winners_bg{
 
@@ -86,13 +97,11 @@ export default {
         background: url("../assets/img/close_icon.png") no-repeat;
         background-size: 100% 100%;
       }
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 0;
       width: 694px;
       height: 512px;
-      margin: 0 auto;
       background: linear-gradient(#c40101, #ff7c00); /* 标准的语法 */
       text-align: center;
       color: #fff;
