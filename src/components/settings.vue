@@ -21,11 +21,10 @@
             <span>二等奖</span>
             <input type="text" v-model="lotteryResultClone[5]">
             <input type="text" v-model="lotteryResultClone[6]">
-            <input type="text" v-model="lotteryResultClone[7]">
           </li>
           <li>
             <span>一等奖</span>
-            <input type="text" v-model="lotteryResultClone[8]">
+            <input type="text" v-model="lotteryResultClone[7]">
           </li>
         </ul>
       </div>

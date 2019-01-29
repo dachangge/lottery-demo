@@ -12,7 +12,7 @@
           一等奖
         </div>
         <div class="list css1704cfa8411f069">
-          <span >{{lotteryResult[8] ? lotteryResult[8] : '(未产生)'}}</span>
+          <span >{{lotteryResult[7] ? lotteryResult[7] : '(未产生)'}}</span>
         </div>
         <div class="title winner1 css1704cfa8411f069">
           二等奖
@@ -20,7 +20,6 @@
         <div class="list css1704cfa8411f069">
           <span >{{lotteryResult[5] ? lotteryResult[5] : '(未产生)'}}</span>
           <span >{{lotteryResult[6] ? lotteryResult[6] : '(未产生)'}}</span>
-          <span >{{lotteryResult[7] ? lotteryResult[7] : '(未产生)'}}</span>
         </div>
         <div class="title winner1 css1704cfa8411f069">
           三等奖
